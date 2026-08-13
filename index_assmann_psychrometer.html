@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Psikrometer Assmann | Info Peralatan BMKG</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f7fa;
+    color: #17324d;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #ffffff;
+    min-height: 92px;
+    padding: 14px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dce6ed;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.logo {
+    width: 66px;
+    height: 66px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 66px;
+    height: 66px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-title {
+    margin: 0;
+    color: #07356f;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.15;
+}
+
+.brand-subtitle {
+    margin-top: 5px;
+    color: #6a7d8d;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.brand-right {
+    color: #0b5aa8;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #07356f 0%, #0b5fa5 100%);
+    color: white;
+    padding: 42px 5vw 48px;
+}
+
+.kicker {
+    color: #91e7a1;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.hero p {
+    margin: 12px 0 0;
+    color: #ffffff;
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.wrap {
+    max-width: 1120px;
+    margin: -28px auto 60px;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #d9e5ed;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(18, 48, 77, 0.10);
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo {
+    padding: 22px;
+    background: linear-gradient(
+        180deg,
+        #f8fbfd 0%,
+        #edf6fa 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    max-height: 560px;
+    object-fit: contain;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    padding: 34px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+}
+
+.section-title {
+    color: #07356f;
+    font-size: 22px;
+    margin: 0 0 13px;
+    line-height: 1.25;
+}
+
+.content p {
+    color: #40586c;
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* =========================
+   INTI BOX
+========================= */
+
+.info-box {
+    margin-top: 18px;
+    padding: 17px 19px;
+    background: #eef8f1;
+    border-left: 5px solid #159447;
+    border-radius: 13px;
+    color: #234d35;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.info-box strong {
+    color: #087735;
+}
+
+/* =========================
+   METRICS
+========================= */
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.metric {
+    padding: 16px;
+    border: 1px solid #dce7ee;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.metric strong {
+    display: block;
+    color: #07356f;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.metric span {
+    display: block;
+    margin-top: 6px;
+    color: #6b7f91;
+    font-size: 13px;
+}
+
+/* =========================
+   WORKING PRINCIPLE
+========================= */
+
+.full-section {
+    margin-top: 32px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.step {
+    background: #f5f8fa;
+    border-radius: 15px;
+    padding: 18px;
+}
+
+.number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #07356f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin-bottom: 11px;
+}
+
+.step strong {
+    color: #07356f;
+    font-size: 16px;
+}
+
+.step p {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   SOURCE
+========================= */
+
+.source {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #e1e8ed;
+    color: #708392;
+    font-size: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #07356f;
+    color: white;
+    min-height: 48px;
+    padding: 15px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.footer-right {
+    font-weight: 800;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        min-height: 88px;
+        padding: 12px 20px;
+    }
+
+    .logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-title {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+
+    .brand-subtitle {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    .brand-right {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 34px 30px 44px;
+    }
+
+    .kicker {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .wrap {
+        padding: 0 16px;
+    }
+
+    .content {
+        padding: 26px 22px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 12px 16px;
+    }
+
+    .logo {
+        width: 62px;
+        height: 62px;
+    }
+
+    .logo img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .brand-title {
+        font-size: 15px;
+    }
+
+    .brand-subtitle {
+        font-size: 10px;
+    }
+
+    .brand-right {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 31px 30px 42px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+
+    .photo {
+        padding: 12px;
+    }
+
+    .photo img {
+        border-radius: 14px;
+    }
+
+    .content {
+        padding: 24px 20px;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .metric {
+        padding: 13px;
+    }
+
+    .metric strong {
+        font-size: 14px;
+    }
+
+    .metric span {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 14px 20px;
+        font-size: 11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="logo">
+            <img src="logo-bmkg.png" alt="Logo BMKG">
+        </div>
+
+        <div class="brand-text">
+            <div class="brand-title">
+                INFO PERALATAN BMKG
+            </div>
+
+            <div class="brand-subtitle">
+                Pameran Pembangunan BMKG NTT 2026
+            </div>
+        </div>
+
+    </div>
+
+    <div class="brand-right">
+        infobmkg
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="kicker">
+        METEOROLOGI • INSTRUMEN PENGAMATAN
+    </div>
+
+    <h1>
+        Psikrometer Assmann
+    </h1>
+
+    <p>
+        Pengukur Suhu dan Kelembapan Udara
+    </p>
+
+</section>
+
+
+<!-- =========================
+     CONTENT
+========================= -->
+
+<main class="wrap">
+
+<div class="card">
+
+    <!-- FOTO -->
+
+    <div class="photo">
+
+        <img
+            src="assmann-psychrometer.jpg"
+            alt="Psikrometer Assmann"
+        >
+
+    </div>
+
+
+    <div class="content">
+
+        <!-- INTRO + PARAMETER -->
+
+        <div class="grid">
+
+            <section>
+
+                <h2 class="section-title">
+                    🌡️ Apa itu Psikrometer Assmann?
+                </h2>
+
+                <p>
+                    Psikrometer Assmann adalah instrumen meteorologi
+                    yang digunakan untuk mengukur suhu udara dan
+                    menentukan kelembapan udara berdasarkan perbedaan
+                    suhu <strong>bola kering</strong> dan
+                    <strong>bola basah</strong>.
+                    Instrumen ini menggunakan ventilasi paksa untuk
+                    mengalirkan udara melewati kedua termometer selama
+                    pengamatan.
+                </p>
+
+                <div class="info-box">
+
+                    <strong>Intinya:</strong>
+                    semakin besar selisih suhu bola kering dan bola
+                    basah, umumnya menunjukkan udara yang semakin kering.
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h2 class="section-title">
+                    📊 Parameter yang diukur
+                </h2>
+
+                <div class="metrics">
+
+                    <div class="metric">
+                        <strong>Suhu bola kering</strong>
+                        <span>°C</span>
+                    </div>
+
+                    <div class="metric">
+                        <strong>Suhu bola basah</strong>
+                        <span>°C</span>
+                    </div>
+
+                    <div class="metric">
+                        <strong>Kelembapan relatif</strong>
+                        <span>%</span>
+                    </div>
+
+                    <div class="metric">
+                        <strong>Titik embun</strong>
+                        <span>°C</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- CARA KERJA -->
+
+        <section class="full-section">
+
+            <h2 class="section-title">
+                ⚙️ Bagaimana cara kerjanya?
+            </h2>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="number">1</div>
+
+                    <strong>Bola kering</strong>
+
+                    <p>
+                        Termometer mengukur suhu udara tanpa
+                        pembasahan.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="number">2</div>
+
+                    <strong>Bola basah</strong>
+
+                    <p>
+                        Bulb termometer dibungkus kain atau wick
+                        yang dibasahi air. Penguapan menyebabkan
+                        suhu bola basah menjadi lebih rendah.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="number">3</div>
+
+                    <strong>Ventilasi paksa</strong>
+
+                    <p>
+                        Udara dialirkan melewati kedua termometer.
+                        Selisih suhu bola kering dan bola basah
+                        digunakan untuk menentukan kelembapan udara.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEGUNAAN -->
+
+        <section class="full-section">
+
+            <h2 class="section-title">
+                🎯 Untuk apa data ini?
+            </h2>
+
+            <p>
+                Data hasil pengamatan digunakan untuk mengetahui
+                kondisi suhu dan kelembapan atmosfer serta mendukung
+                pengamatan dan analisis meteorologi dan klimatologi.
+            </p>
+
+        </section>
+
+
+        <!-- SOURCE -->
+
+        <div class="source">
+            Sumber informasi teknis: BMKG NTT.
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <span>
+        INFO PERALATAN BMKG • BMKG NTT 2026
+    </span>
+
+    <span class="footer-right">
+        infobmkg
+    </span>
+
+</footer>
+
+</body>
+</html>
