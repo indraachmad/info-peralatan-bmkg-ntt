@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handheld Anemometer | Info Peralatan BMKG</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f3f7fa;
+  color:#17324d;
+}
+.header{
+  height:88px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 5.2%;
+  border-bottom:1px solid #dce7ef;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+}
+.brand-title{
+  color:#0b376d;
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.brand-sub{
+  color:#718196;
+  font-size:14px;
+  margin-top:4px;
+}
+.brand-right{
+  color:#1260a3;
+  font-size:17px;
+  font-weight:800;
+}
+.hero{
+  background:linear-gradient(120deg,#0d427d,#1269a6);
+  color:#fff;
+  padding:40px 5.2% 46px;
+}
+.kicker{
+  color:#8ee69d;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:13px;
+}
+h1{
+  margin:0;
+  font-size:48px;
+  line-height:1.08;
+  letter-spacing:-1px;
+}
+.subtitle{
+  margin:14px 0 0;
+  font-size:25px;
+  color:#fff;
+}
+.wrap{
+  width:min(1000px,92%);
+  margin:-12px auto 55px;
+  position:relative;
+}
+.card{
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 12px 34px rgba(20,57,87,.13);
+  overflow:hidden;
+}
+.photo{
+  padding:10px;
+  background:#f8fbfd;
+  display:flex;
+  justify-content:center;
+}
+.photo img{
+  width:100%;
+  max-height:620px;
+  object-fit:contain;
+  border-radius:15px;
+  display:block;
+}
+.content{padding:30px 34px 34px}
+.grid{
+  display:grid;
+  grid-template-columns:1.45fr 1fr;
+  gap:28px;
+}
+section{margin-bottom:28px}
+h2{
+  color:#073c76;
+  font-size:21px;
+  margin:0 0 13px;
+}
+p{
+  font-size:16px;
+  line-height:1.7;
+  margin:0;
+}
+.metrics{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.metric{
+  border:1px solid #d7e3ec;
+  border-radius:12px;
+  padding:16px;
+  background:#fff;
+}
+.metric strong{display:block;color:#0a4c87;font-size:16px}
+.metric span{display:block;color:#6b7d90;font-size:13px;margin-top:6px}
+.note{
+  background:#eef8ef;
+  border-left:4px solid #21a14b;
+  padding:14px 16px;
+  border-radius:10px;
+  margin-top:16px;
+}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.step{
+  background:#f5f8fa;
+  border-radius:13px;
+  padding:18px;
+}
+.num{
+  width:25px;height:25px;border-radius:50%;
+  background:#0b437f;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:13px;margin-bottom:10px;
+}
+.step strong{display:block;color:#123e6d;margin-bottom:7px}
+.footer{
+  background:#0b3b73;
+  color:#fff;
+  padding:15px 5.2%;
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  font-weight:700;
+}
+@media(max-width:720px){
+  .header{height:auto;min-height:92px;padding:12px 5%}
+  .logo{width:52px;height:52px}
+  .brand-title{font-size:15px}
+  .brand-sub{font-size:12px}
+  .brand-right{font-size:14px}
+  .hero{padding:30px 5% 42px}
+  h1{font-size:38px}
+  .subtitle{font-size:21px}
+  .wrap{width:94%;margin:-8px auto 35px}
+  .content{padding:25px 20px}
+  .grid,.steps{grid-template-columns:1fr}
+  .metrics{grid-template-columns:1fr 1fr}
+  .footer{padding:13px 5%;font-size:11px}
+}
+@media(max-width:430px){
+  .brand-right{font-size:13px}
+  .metrics{grid-template-columns:1fr}
+  h1{font-size:34px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="brand">
+    <img class="logo" src="logo-bmkg.png" alt="Logo BMKG">
+    <div>
+      <div class="brand-title">INFO PERALATAN BMKG</div>
+      <div class="brand-sub">Pameran Pembangunan BMKG NTT 2026</div>
+    </div>
+  </div>
+  <div class="brand-right">infobmkg</div>
+</header>
+
+<section class="hero">
+  <div class="kicker">METEOROLOGI • INSTRUMEN PENGAMATAN</div>
+  <h1>Handheld Anemometer</h1>
+  <p class="subtitle">Alat Pengukur Kecepatan Angin</p>
+</section>
+
+<main class="wrap">
+  <div class="card">
+
+    <div class="photo">
+      <img src="handheld-anemometer.jpg" alt="Handheld Anemometer">
+    </div>
+
+    <div class="content">
+
+      <div class="grid">
+        <section>
+          <h2>🌬️ Apa itu Handheld Anemometer?</h2>
+          <p>
+            Handheld anemometer adalah alat ukur portabel yang digunakan untuk
+            mengukur <strong>kecepatan angin</strong>. Sensor berupa cup atau
+            baling-baling berputar ketika terkena aliran udara, kemudian
+            putarannya diterjemahkan menjadi nilai kecepatan angin.
+          </p>
+
+          <div class="note">
+            <strong>Intinya:</strong> semakin cepat sensor berputar, semakin
+            besar kecepatan angin yang terukur.
+          </div>
+        </section>
+
+        <section>
+          <h2>📊 Parameter yang diukur</h2>
+          <div class="metrics">
+            <div class="metric">
+              <strong>Kecepatan angin</strong>
+              <span>meter per detik (m/s)</span>
+            </div>
+            <div class="metric">
+              <strong>Knots</strong>
+              <span>satuan kecepatan angin (kt)</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section>
+        <h2>⚙️ Bagaimana cara kerjanya?</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <strong>Angin menggerakkan sensor</strong>
+            <p>Aliran udara membuat cup atau baling-baling berputar.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <strong>Putaran terdeteksi</strong>
+            <p>Kecepatan putaran sensor berkaitan dengan kecepatan angin.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <strong>Nilai ditentukan</strong>
+            <p>Hasil pengukuran ditampilkan dalam satuan kecepatan angin.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>🎯 Untuk apa data ini?</h2>
+        <p>
+          Data kecepatan angin digunakan untuk pengamatan dan analisis cuaca,
+          mendukung kegiatan operasional meteorologi, penerbangan, kelautan,
+          pertanian, serta berbagai aktivitas masyarakat yang dipengaruhi oleh
+          kondisi angin.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <span>INFO PERALATAN BMKG • BMKG NTT 2026</span>
+  <span>infobmkg</span>
+</footer>
+
+</body>
+</html>
