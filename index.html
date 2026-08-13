@@ -6,26 +6,49 @@
 <title>Info Peralatan BMKG — Campbell–Stokes</title>
 <style>
 :root{--blue:#07356f;--blue2:#0b5aa8;--green:#159447;--pale:#eef8f1;--ink:#17324d;--muted:#60758a}
-*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#f4f8fb}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#f4f8fb}
 .header{background:white;border-bottom:1px solid #dce7ef;padding:18px 5vw;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;gap:14px;align-items:center}.logo{width:52px;height:52px;border-radius:50%;background:#1e9a45;color:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 3px 10px #0002}.brand b{display:block;color:var(--blue);letter-spacing:.08em}.brand span{font-size:13px;color:var(--muted)}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:52px;height:52px;display:grid;place-items:center;overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:contain}
+.brand b{display:block;color:var(--blue);letter-spacing:.08em}
+.brand span{font-size:13px;color:var(--muted)}
 .hero{background:linear-gradient(135deg,#07356f,#0a63a7);color:white;padding:42px 5vw 48px}
-.kicker{letter-spacing:.16em;font-weight:800;color:#8ee49f;font-size:13px}.hero h1{font-size:clamp(34px,5vw,62px);margin:8px 0 4px}.hero p{margin:0;opacity:.9;font-size:18px}
+.kicker{letter-spacing:.16em;font-weight:800;color:#8ee49f;font-size:13px}
+.hero h1{font-size:clamp(34px,5vw,62px);margin:8px 0 4px}
+.hero p{margin:0;color:#fff;opacity:1;font-size:18px}
 .wrap{max-width:1120px;margin:-28px auto 60px;padding:0 20px}
 .card{background:white;border-radius:24px;box-shadow:0 15px 45px #12304d16;overflow:hidden;border:1px solid #dbe7ef}
-.photo{padding:22px;background:linear-gradient(180deg,#f7fbff,#edf7fb)}.photo img{width:100%;max-height:520px;object-fit:contain;border-radius:18px;background:#fff}
-.content{padding:34px}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px}
-h2{color:var(--blue);margin:0 0 12px;font-size:22px} p{line-height:1.7;color:#40586c}.box{background:var(--pale);border-left:5px solid var(--green);padding:18px 20px;border-radius:14px;margin:18px 0}
-.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{padding:16px;border:1px solid #dce8ef;border-radius:14px}.metric strong{display:block;color:var(--blue);font-size:18px}.metric span{font-size:13px;color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{padding:17px;border-radius:15px;background:#f6f9fb}.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:800;margin-bottom:10px}
-.qr{display:flex;align-items:center;gap:18px;background:#f7fafc;border:1px solid #dce8ef;border-radius:18px;padding:18px;margin-top:24px}.qr img{width:112px;height:112px}.qr b{color:var(--blue)}
-.source{font-size:12px;color:#6b7f91;margin-top:24px}.footer{background:#07356f;color:#fff;padding:24px 5vw;display:flex;justify-content:space-between;gap:20px;font-size:13px}
-@media(max-width:800px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.header{padding:14px 20px}.hero{padding:34px 20px 42px}.footer{flex-direction:column}}
+.photo{padding:22px;background:linear-gradient(180deg,#f7fbff,#edf7fb)}
+.photo img{width:100%;max-height:520px;object-fit:contain;border-radius:18px;background:#fff}
+.content{padding:34px}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px}
+h2{color:var(--blue);margin:0 0 12px;font-size:22px}
+p{line-height:1.7;color:#40586c}
+.box{background:var(--pale);border-left:5px solid var(--green);padding:18px 20px;border-radius:14px;margin:18px 0}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.metric{padding:16px;border:1px solid #dce8ef;border-radius:14px}
+.metric strong{display:block;color:var(--blue);font-size:18px}
+.metric span{font-size:13px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.step{padding:17px;border-radius:15px;background:#f6f9fb}
+.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:800;margin-bottom:10px}
+.source{font-size:12px;color:#6b7f91;margin-top:24px}
+.footer{background:#07356f;color:#fff;padding:24px 5vw;display:flex;justify-content:space-between;gap:20px;font-size:13px}
+@media(max-width:800px){
+.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}
+.header{padding:14px 20px}.hero{padding:34px 20px 42px}.footer{flex-direction:column}
+}
 </style>
 </head>
 <body>
+
 <header class="header">
-  <div class="brand"><div class="logo">BMKG</div><div><b>INFO PERALATAN BMKG</b><span>Pameran Pembangunan BMKG NTT 2026</span></div></div>
+  <div class="brand">
+    <div class="logo"><img src="logo-bmkg.png" alt="Logo BMKG"></div>
+    <div><b>INFO PERALATAN BMKG</b><span>Pameran Pembangunan BMKG NTT 2026</span></div>
+  </div>
   <div style="font-weight:800;color:#0b5aa8">infobmkg</div>
 </header>
 
@@ -68,15 +91,11 @@ h2{color:var(--blue);margin:0 0 12px;font-size:22px} p{line-height:1.7;color:#40
       <p>Data lama penyinaran digunakan dalam pengamatan dan analisis cuaca serta iklim, termasuk untuk memahami kondisi radiasi dan karakteristik penyinaran di suatu wilayah.</p>
     </div>
 
-    <div class="qr">
-      <img src="qr-demo-campbell-stokes.png" alt="QR demo">
-      <div><b>SCAN QR UNTUK INFORMASI LEBIH LANJUT</b><p style="margin:6px 0 0">QR ini masih menuju halaman peralatan BMKG resmi sebagai <strong>demo</strong>. Pada versi final, QR akan diarahkan langsung ke halaman Campbell–Stokes milik sistem Info Peralatan BMKG NTT.</p></div>
-    </div>
-
-    <div class="source">Sumber informasi teknis: BMKG Stasiun Klimatologi D.I. Yogyakarta dan BMKG Stasiun Klimatologi Sumatera Selatan.</div>
+    <div class="source">Sumber informasi teknis: BMKG NTT.</div>
   </div>
 </div>
 </main>
 
 <footer class="footer"><span>INFO PERALATAN BMKG • BMKG NTT 2026</span><b>infobmkg</b></footer>
-</body></html>
+</body>
+</html>
